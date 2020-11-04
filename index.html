@@ -6,59 +6,85 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Chris Proutt: Junior Web Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
 </head>
 
 <body>
-  <div class="container-fluid">
-      <header id="hero-section">
-        <div id="hero">
-          <div id="hero-overlay">
-            <h1>Christopher Proutt</h1>
-            <h3>Junior Web Developer</h3>
-            <a href="#contact" class="cta"></a>
+  <div id="main" class="container-fluid">
+    <div class="row">
+      <nav id="mobile-nav">
+        <div id="mobile-header">
+          <div class="row">
+              <div class="col-11">
+                <h4>Christopher Proutt</h4>
+              </div>
+              <div class="col-1">
+                <h4><i class="fa fa-bars"></i></h4>
+              </div>
           </div>
-          <div class="overlay"></div>
-          <img src="hero.jpg" alt="Hero Image" id="hero-img" class="img-fluid">
         </div>
-      </header>
+        <div class="row">
+          <div class="col-xs-12">
+            <ul id="mobile">
+              <li class="mobile-link"><a href="#about">About</a></li>
+              <li class="mobile-link"><a href="#skills">Skills</a></li>
+              <li class="mobile-link"><a href="#projects">Projects</a></li>
+              <li class="mobile-link"><a href="#contact" class="mobile-cta">Hire Me</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <header id="hero-section">
+      <div id="hero">
+        <div id="hero-overlay">
+          <h1>Christopher Proutt</h1>
+          <p>Junior Web Developer</p>
+          <a href="#contact" class="cta">Hire Me</a>
+        </div>
+        <div class="overlay"></div>
+        <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?cs=srgb&dl=pexels-picjumbocom-196644.jpg&fm=jpg" alt="Hero Image" id="hero-img" class="img-fluid">
+      </div>
+    </header>
 
     <nav id="sticky-nav">
-      <ul id="sticky">
-        <li class="nav-link"><img src="#" alt="Logo"></li>
-        <li class="nav-link"><a href="#about">About</a></li>
-        <li class="nav-link"><a href="#skills">Skills</a></li>
-        <li class="nav-link"><a href="#projects">Projects</a></li>
-        <li class="nav-link"><a href="#contact" class="cta"></a></li>
-      </ul>
-    </nav>
-    <nav id="mobile-nav">
-      <ul id="mobile">
-        <li class="nav-link"><a href="#about">About</a></li>
-        <li class="nav-link"><a href="#skills">Skills</a></li>
-        <li class="nav-link"><a href="#projects">Projects</a></li>
-        <li class="nav-link"><a href="#contact" class="cta"></a></li>
-      </ul>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-8">
+          <ul id="sticky">
+            <li class="nav-link"><a href="#about">About</a></li>
+            <li class="nav-link"><a href="#skills">Skills</a></li>
+            <li class="nav-link"><a href="#projects">Projects</a></li>
+            <li class="nav-link"><a href="#contact" class="sticky-cta">Hire Me</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <div class="row">
-      <section id="about">
+      <section id="about" class="content-section">
         <div class="row">
           <div class="col-xs-12 col-md-6">
-            <img src="#" alt="Headshot">
+            <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t31.0-8/28947109_2052476924967010_872868090516035202_o.jpg?_nc_cat=100&ccb=2&_nc_sid=09cbfe&_nc_ohc=KBL9ULkZHmkAX_SuV1G&_nc_ht=scontent-lax3-1.xx&oh=510b480bf7f8c331c15db2b1e298abfb&oe=5FC9F3D9" alt="Headshot" class="img-fluid">
           </div>
 
           <div class="col-xs-12 col-md-6">
             <h2>About Me</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident nihil hic voluptates, minus eius inventore esse sapiente a. Possimus officiis architecto illum, necessitatibus quibusdam recusandae aliquid totam modi fugit dicta.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <a href="#contact" class="cta">Hire Me</a>
+            <a href="#skills" class="cta">See My Skills</a>
           </div>
         </div>
       </section>
-      <section id="skills">
+      <section id="skills" class="content-section">
         <div class="row">
           <h2 class="section-heading">My Skills</h2>
           <div class="col-xs-12 col-md-6">
@@ -72,16 +98,20 @@
     </div>
 
     <div class="row">
-      <section id="projects">
+      <section id="projects" class="content-section">
         <h2 class="section-heading">My Work</h2>
         <div class="row">
           <div class="col-xs-12 col-md-6">
-            <img src="#" alt="Project 1 Thumb" class="project-thumb">
+            <img src="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Project 1 Thumb" class="project-thumb img-fluid">
             <h3 class="project-title">Project 1</h3>
             <a href="#project-1" class="project-cta">See More</a>
           </div>
-          <div class="col-xs-12 col-md-6"></div>
-          <div id="project-1" class="col-xs-12">
+          <div class="col-xs-12 col-md-6">
+            <img src="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Project 2 Thumb" class="project-thumb img-fluid">
+            <h3 class="project-title">Project 2</h3>
+            <a href="#project-1" class="project-cta">See More</a>
+          </div>
+          <div id="project-1" class="col-xs-12 project-full">
             <div class="row">
               <div class="col-xs-12 col-md-6">
                 <img src="#" alt="Project 1" class="project-thumb">
@@ -92,7 +122,7 @@
               </div>
             </div>
           </div>
-          <div id="project-2" class="col-xs-12">
+          <div id="project-2" class="col-xs-12 project-full">
             <div class="row">
               <div class="col-xs-12 col-md-6">
                 <img src="#" alt="Project 2" class="project-thumb">
@@ -106,16 +136,11 @@
         </div>
         <div class="row">
           <div class="col-xs-12 col-md-6">
-            <img src="#" alt="Project 3 Thumb" class="project-thumb">
+            <img src="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Project 3 Thumb" class="project-thumb img-fluid">
             <h3 class="project-title">Project 3</h3>
             <a href="#project-3" class="project-cta">See More</a>
           </div>
-          <div class="col-xs-12 col-md-6">
-            <img src="#" alt="Project 4 Thumb" class="project-thumb">
-            <h3 class="project-title">Project 4</h3>
-            <a href="#project-4" class="project-cta">See More</a>
-          </div>
-          <div id="project-3" class="col-xs-12">
+          <div id="project-3" class="col-xs-12 d-md-none d-lg-none d-xl-none project-full">
             <div class="row">
               <div class="col-xs-12 col-md-6">
                 <img src="#" alt="Project 3" class="project-thumb">
@@ -126,7 +151,23 @@
               </div>
             </div>
           </div>
-          <div id="project-4" class="col-xs-12">
+          <div class="col-xs-12 col-md-6">
+            <img src="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Project 4 Thumb" class="project-thumb img-fluid">
+            <h3 class="project-title">Project 4</h3>
+            <a href="#project-4" class="project-cta">See More</a>
+          </div>
+          <div id="project-3" class="col-md-12 d-none d-md-block project-full">
+            <div class="row">
+              <div class="col-xs-12 col-md-6">
+                <img src="#" alt="Project 3" class="project-thumb">
+              </div>
+              <div class="col-xs-12 col-md-6">
+                <h4 class="project-title">Project 3</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+            </div>
+          </div>
+          <div id="project-4" class="col-md-12 project-full">
             <div class="row">
               <div class="col-xs-12 col-md-6">
                 <img src="#" alt="Project 4" class="project-thumb">
@@ -142,14 +183,14 @@
     </div>
 
     <div class="row">
-      <section id="contact">
+      <section id="contact" class="content-section">
         <form action="mailto:thechrisproutt@gmail.com" id="contact-form">
           <h2 class="section-header">Hire Me!</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi veritatis porro, quibusdam minus? Incidunt saepe non numquam porro voluptates, minima facere, perspiciatis consequuntur eaque cum, consectetur vitae tempore repudiandae.</p>
-          <input type="text">
-          <input type="text">
-          <input type="text">
-          <button class="cta" formaction="submit"></button>
+          <input type="text" placeholder="Your Name">
+          <input type="email" placeholder="Your Email">
+          <textarea name="name" rows="5" cols="80" placeholder="Your Message"></textarea>
+          <button class="cta" formaction="submit">Submit</button>
         </form>
       </section>
     </div>
