@@ -142,6 +142,9 @@ ol{
 
 #hero-img{
   z-index: 0;
+  max-height: 800px;
+  overflow-y: hidden;
+  width: fit-content;
 }
 
 /* Navigation */
