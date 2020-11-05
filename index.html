@@ -8,10 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
-">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </head>
 
@@ -25,7 +26,7 @@
                 <h4>Christopher Proutt</h4>
               </div>
               <div class="col-1">
-                <h4 onclick="mobileMenu()"><i class="fa fa-bars"></i></h4>
+                <h4 onclick="showMobileMenu()"><i class="fa fa-bars"></i></h4>
               </div>
           </div>
         </div>
@@ -76,22 +77,57 @@
           </div>
 
           <div class="col-xs-12 col-md-6">
-            <h2>About Me</h2>
+            <h2 class="section-title">About Me</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident nihil hic voluptates, minus eius inventore esse sapiente a. Possimus officiis architecto illum, necessitatibus quibusdam recusandae aliquid totam modi fugit dicta.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <a href="#contact" class="cta">Hire Me</a>
-            <a href="#skills" class="cta">See My Skills</a>
+            <button id="skills-cta" class="cta">See My Skills</button>
+            <!-- <a href="#" id="skills-cta" class="cta">See My Skills</a> -->
+            <!-- Add onclick="showSkillsSection()" up if back to javascript -->
           </div>
         </div>
       </section>
       <section id="skills" class="content-section">
         <div class="row">
-          <h2 class="section-heading">My Skills</h2>
-          <div class="col-xs-12 col-md-6">
+          <h2 class="section-title">My Skills</h2>
+          <div class="col-xs-12">
+            <div class=" wow fadeInUp container-skillbar" data-wow-delay="0.2s">
+              <div class="skillbar clearfix " data-percent="90%">
+                <div class="skillbar-title" style="background: #DD1E2F;"><span>HTML5</span></div>
+                <div class="skillbar-bar" style="background: #DD1E2F;"></div>
+                <div class="skill-bar-percent">90%</div>
+              </div> <!-- End Skill Bar -->
 
-          </div>
-          <div class="col-xs-12 col-md-6">
+              <div class="skillbar clearfix " data-percent="80%">
+                <div class="skillbar-title" style="background: #EBB035;"><span>CSS3</span></div>
+                <div class="skillbar-bar" style="background: #EBB035;"></div>
+                <div class="skill-bar-percent">80%</div>
+              </div> <!-- End Skill Bar -->
 
+              <div class="skillbar clearfix " data-percent="75%">
+                <div class="skillbar-title" style="background: #218559;"><span>Photoshop</span></div>
+                <div class="skillbar-bar" style="background: #218559;"></div>
+                <div class="skill-bar-percent">75%</div>
+              </div> <!-- End Skill Bar -->
+
+              <div class="skillbar clearfix " data-percent="45%">
+                <div class="skillbar-title" style="background: #6840D4;"><span>Rails</span></div>
+                <div class="skillbar-bar" style="background: #6840D4;"></div>
+                <div class="skill-bar-percent">45%</div>
+              </div> <!-- End Skill Bar -->
+
+              <div class="skillbar clearfix " data-percent="30%">
+                <div class="skillbar-title" style="background: #06A2CB;"><span>jQuery</span></div>
+                <div class="skillbar-bar" style="background: #06A2CB;"></div>
+                <div class="skill-bar-percent">30%</div>
+              </div> <!-- End Skill Bar -->
+
+              <div class="skillbar clearfix " data-percent="20%">
+                <div class="skillbar-title" style="background: #AB4DD2;"><span>PHP</span></div>
+                <div class="skillbar-bar" style="background: #AB4DD2;"></div>
+                <div class="skill-bar-percent">20%</div>
+              </div> <!-- End Skill Bar -->
+            </div>
           </div>
         </div>
       </section>
@@ -99,7 +135,7 @@
 
     <div class="row">
       <section id="projects" class="content-section">
-        <h2 class="section-heading">My Work</h2>
+        <h2 class="section-title">My Work</h2>
         <div class="row">
           <div class="col-xs-12 col-md-6">
             <img src="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Project 1 Thumb" class="project-thumb img-fluid">
@@ -185,7 +221,7 @@
     <div class="row">
       <section id="contact" class="content-section">
         <form action="mailto:thechrisproutt@gmail.com" id="contact-form">
-          <h2 class="section-header">Hire Me!</h2>
+          <h2 class="section-title">Hire Me!</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi veritatis porro, quibusdam minus? Incidunt saepe non numquam porro voluptates, minima facere, perspiciatis consequuntur eaque cum, consectetur vitae tempore repudiandae.</p>
           <input type="text" placeholder="Your Name">
           <input type="email" placeholder="Your Email">
@@ -197,12 +233,20 @@
 
     <div class="row">
       <footer id="main-footer">
-
+        <div class="col-xs-12 col-md-6">
+          <h3 class="section-title">Connect With Me</h3>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://github.com/cproutt"><i class="fab fa-github"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.linkedin.com/in/cproutt/"><i class="fab fa-linkedin"></i></a></li>
+            <li class="list-inline-item"><a href="https://codepen.io/cproutt"><i class="fab fa-codepen"></i></a></li>
+          </ul>
+        </div>
       </footer>
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
 </body>

@@ -110,6 +110,26 @@ ol{
 #hero-overlay p{
   color: white;
   font-size: 1.5em;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: lightskyblue }
 }
 
 .overlay{
@@ -206,15 +226,107 @@ ol{
   background-color: white;
 }
 
+/* Sections */
+.section-title{
+  text-align: center;
+}
 
+/* Skills Section */
 #skills{
   display: none;
-  background-color: darkblue;
+  background-color: lightskyblue;
   color: white;
 }
 
+#skills-cta{
+  min-width: 175px;
+  border: none;
+}
 
 
+/* Skill bars */
+
+.container-skillbar {
+   width:100%;
+   padding-top:30px;
+   padding-right: 2%;
+   padding-left: 2%;
+   height:auto;
+   overflow:none;
+ }
+ .skillbar {
+   position:relative;
+   display:block;
+   margin-bottom:15px;
+   width:100%;
+   background:#efefef;
+   height:30px;
+   border-radius:3px;
+   -moz-border-radius:3px;
+   -webkit-border-radius:3px;
+   -webkit-transition:0.4s linear;
+   -moz-transition:0.4s linear;
+   -ms-transition:0.4s linear;
+   -o-transition:0.4s linear;
+   transition:0.4s linear;
+   -webkit-transition-property:width, background-color;
+   -moz-transition-property:width, background-color;
+   -ms-transition-property:width, background-color;
+   -o-transition-property:width, background-color;
+   transition-property:width, background-color;
+ }
+
+ .skillbar-title {
+   position:absolute;
+   top:0;
+   left:0;
+   width:110px;
+   font-weight:bold;
+   font-size:13px;
+   color:#fff;
+   background:#6adcfa;
+   -webkit-border-top-left-radius:3px;
+   -webkit-border-bottom-left-radius:4px;
+   -moz-border-radius-topleft:3px;
+   -moz-border-radius-bottomleft:3px;
+   border-top-left-radius:3px;
+   border-bottom-left-radius:3px;
+ }
+
+ .skillbar-title span {
+   display:block;
+   background:rgba(0, 0, 0, 0.15);
+   padding:0 20px;
+   height:30px;
+   line-height:30px;
+   -webkit-border-top-left-radius:3px;
+   -webkit-border-bottom-left-radius:3px;
+   -moz-border-radius-topleft:3px;
+   -moz-border-radius-bottomleft:3px;
+   border-top-left-radius:3px;
+   border-bottom-left-radius:3px;
+ }
+
+ .skillbar-bar {
+   height:30px;
+   width:0px;
+   border-radius:3px;
+   -moz-border-radius:3px;
+   -webkit-border-radius:3px;
+ }
+
+ .skill-bar-percent {
+   position:absolute;
+   right:10px;
+   top:0;
+   font-size:11px;
+   height:30px;
+   line-height:30px;
+   color:#ffffff;
+   color:rgba(0, 0, 0, 0.5);
+ }
+
+/* Projects Section */
 .project-full{
   display: none;
 }
@@ -239,4 +351,22 @@ ol{
   margin: 1em 0;
   display: block;
   width: 100%;
+}
+
+
+/*Footer */
+#main-footer h3{
+  margin-bottom: 0;
+}
+
+#main-footer ul{
+  text-align: center;
+}
+
+#main-footer li{
+  font-size: 1.5em;
+}
+
+#main-footer li a{
+  color: blue;
 }

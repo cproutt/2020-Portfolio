@@ -1,5 +1,5 @@
 // Mobile Menu button
-const showMobileMenu() {
+const showMobileMenu = () => {
   var x = document.getElementById("mobile");
   if (x.style.display === "none") {
     x.style.display = "block";
@@ -7,3 +7,10 @@ const showMobileMenu() {
     x.style.display = "none";
   }
 }
+
+// Toggle Skills Section
+$(document).ready(function(){
+  $("#skills-cta").click(function(){
+    $("#skills").toggle(900);
+  });
+});
