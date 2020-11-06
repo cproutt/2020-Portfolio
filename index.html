@@ -81,9 +81,6 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident nihil hic voluptates, minus eius inventore esse sapiente a. Possimus officiis architecto illum, necessitatibus quibusdam recusandae aliquid totam modi fugit dicta.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <a href="#contact" class="cta">Hire Me</a>
-            <button id="skills-cta" class="cta">See My Skills</button>
-            <!-- <a href="#" id="skills-cta" class="cta">See My Skills</a> -->
-            <!-- Add onclick="showSkillsSection()" up if back to javascript -->
           </div>
         </div>
       </section>
@@ -91,44 +88,57 @@
         <div class="row">
           <h2 class="section-title">My Skills</h2>
           <div class="col-xs-12">
-            <div class=" wow fadeInUp container-skillbar" data-wow-delay="0.2s">
-              <div class="skillbar clearfix " data-percent="90%">
-                <div class="skillbar-title" style="background: #DD1E2F;"><span>HTML5</span></div>
-                <div class="skillbar-bar" style="background: #DD1E2F;"></div>
-                <div class="skill-bar-percent">90%</div>
-              </div> <!-- End Skill Bar -->
+            <div id="skillBarsContainer">
+              <div class="skillBar">
+                  <h4>HTML</h4>
+                  <div class="skillBarContainer">
+                    <div class="skillBarValue value-90"></div>
+                  </div>
+                </div>
 
-              <div class="skillbar clearfix " data-percent="80%">
-                <div class="skillbar-title" style="background: #EBB035;"><span>CSS3</span></div>
-                <div class="skillbar-bar" style="background: #EBB035;"></div>
-                <div class="skill-bar-percent">80%</div>
-              </div> <!-- End Skill Bar -->
+                <div class="skillBar">
+                  <h4>CSS3</h4>
+                  <div class="skillBarContainer">
+                    <div class="skillBarValue value-90"></div>
+                  </div>
+                </div>
 
-              <div class="skillbar clearfix " data-percent="75%">
-                <div class="skillbar-title" style="background: #218559;"><span>Photoshop</span></div>
-                <div class="skillbar-bar" style="background: #218559;"></div>
-                <div class="skill-bar-percent">75%</div>
-              </div> <!-- End Skill Bar -->
+                <div class="skillBar">
+                  <h4>JavaScript</h4>
+                  <div class="skillBarContainer">
+                    <div class="skillBarValue value-80"></div>
+                  </div>
+                </div>
 
-              <div class="skillbar clearfix " data-percent="45%">
-                <div class="skillbar-title" style="background: #6840D4;"><span>Rails</span></div>
-                <div class="skillbar-bar" style="background: #6840D4;"></div>
-                <div class="skill-bar-percent">45%</div>
-              </div> <!-- End Skill Bar -->
+                <div class="skillBar">
+                  <h4>Responsive Web Design</h4>
+                  <div class="skillBarContainer">
+                    <div class="skillBarValue value-80"></div>
+                  </div>
+                </div>
 
-              <div class="skillbar clearfix " data-percent="30%">
-                <div class="skillbar-title" style="background: #06A2CB;"><span>jQuery</span></div>
-                <div class="skillbar-bar" style="background: #06A2CB;"></div>
-                <div class="skill-bar-percent">30%</div>
-              </div> <!-- End Skill Bar -->
+                <div class="skillBar">
+                  <h4>PHP</h4>
+                  <div class="skillBarContainer">
+                    <div class="skillBarValue value-60"></div>
+                  </div>
+                </div>
 
-              <div class="skillbar clearfix " data-percent="20%">
-                <div class="skillbar-title" style="background: #AB4DD2;"><span>PHP</span></div>
-                <div class="skillbar-bar" style="background: #AB4DD2;"></div>
-                <div class="skill-bar-percent">20%</div>
-              </div> <!-- End Skill Bar -->
+                <div class="skillBar">
+                  <h4>React</h4>
+                  <div class="skillBarContainer">
+                    <div class="skillBarValue value-75"></div>
+                  </div>
+                </div>
+
+                <div class="skillBar">
+                  <h4>WordPress</h4>
+                  <div class="skillBarContainer">
+                    <div class="skillBarValue value-70"></div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
         </div>
       </section>
     </div>
@@ -137,82 +147,43 @@
       <section id="projects" class="content-section">
         <h2 class="section-title">My Work</h2>
         <div class="row">
-          <div class="col-xs-12 col-md-6">
-            <img src="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Project 1 Thumb" class="project-thumb img-fluid">
-            <h3 class="project-title">Project 1</h3>
-            <a href="#project-1" class="project-cta">See More</a>
-          </div>
-          <div class="col-xs-12 col-md-6">
-            <img src="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Project 2 Thumb" class="project-thumb img-fluid">
-            <h3 class="project-title">Project 2</h3>
-            <a href="#project-1" class="project-cta">See More</a>
-          </div>
-          <div id="project-1" class="col-xs-12 project-full">
-            <div class="row">
-              <div class="col-xs-12 col-md-6">
-                <img src="#" alt="Project 1" class="project-thumb">
+          <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" class="d-block w-100 img-fluid" alt="Project 1">
+                <div class="carousel-caption">
+                  <h5>Project 1</h5>
+                  <p class="d-none d-md-block">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
               </div>
-              <div class="col-xs-12 col-md-6">
-                <h4 class="project-title">Project 1</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <div class="carousel-item">
+                <img src="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" class="d-block w-100 img-fluid" alt="Project 2">
+                <div class="carousel-caption">
+                  <h5>Project 2</h5>
+                  <p class="d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div id="project-2" class="col-xs-12 project-full">
-            <div class="row">
-              <div class="col-xs-12 col-md-6">
-                <img src="#" alt="Project 2" class="project-thumb">
-              </div>
-              <div class="col-xs-12 col-md-6">
-                <h4 class="project-title">Project 2</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <div class="carousel-item">
+                <img src="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" class="d-block w-100 img-fluid" alt="Project 3">
+                <div class="carousel-caption">
+                  <h5>Project 3</h5>
+                  <p class="d-none d-md-block">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-md-6">
-            <img src="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Project 3 Thumb" class="project-thumb img-fluid">
-            <h3 class="project-title">Project 3</h3>
-            <a href="#project-3" class="project-cta">See More</a>
-          </div>
-          <div id="project-3" class="col-xs-12 d-md-none d-lg-none d-xl-none project-full">
-            <div class="row">
-              <div class="col-xs-12 col-md-6">
-                <img src="#" alt="Project 3" class="project-thumb">
-              </div>
-              <div class="col-xs-12 col-md-6">
-                <h4 class="project-title">Project 3</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-md-6">
-            <img src="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Project 4 Thumb" class="project-thumb img-fluid">
-            <h3 class="project-title">Project 4</h3>
-            <a href="#project-4" class="project-cta">See More</a>
-          </div>
-          <div id="project-3" class="col-md-12 d-none d-md-block project-full">
-            <div class="row">
-              <div class="col-xs-12 col-md-6">
-                <img src="#" alt="Project 3" class="project-thumb">
-              </div>
-              <div class="col-xs-12 col-md-6">
-                <h4 class="project-title">Project 3</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div>
-            </div>
-          </div>
-          <div id="project-4" class="col-md-12 project-full">
-            <div class="row">
-              <div class="col-xs-12 col-md-6">
-                <img src="#" alt="Project 4" class="project-thumb">
-              </div>
-              <div class="col-xs-12 col-md-6">
-                <h4 class="project-title">Project 4</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div>
-            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
           </div>
         </div>
       </section>
