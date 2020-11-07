@@ -14,7 +14,7 @@ const shotStickyNav = () => {
   //Get the top positon of window
   //If top position is greater than 250px, toggle sticky nav;
 
-  if(window.innerHeight >= 768){
+  if(screen.width >= 768){
     let topOfScreen = window.pageYOffset;
     const fixedNav = document.getElementById('sticky-nav');
     if(topOfScreen > 300){
